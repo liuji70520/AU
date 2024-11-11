@@ -1,4 +1,9 @@
-
+---
+# Data preparation
+```bash
+paste <(cut -f 2  A_alb.fam) <(cat A_alb.5.Q | tr ' ' '\t') > A_alb.5.Q.tab
+```
+---
 ---
 
 # Code Explanation for Admixture Analysis in R
