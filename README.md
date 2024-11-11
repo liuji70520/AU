@@ -1,4 +1,3 @@
-Certainly! Here’s a markdown version for GitHub with English explanations:
 
 ---
 
