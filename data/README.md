@@ -1,6 +1,6 @@
 # file format
 [Reference file format](https://github.com/tom-jenkins/mapmixture?tab=readme-ov-file#format)
-
+This map file(.json) is from [Alibaba](https://datav.aliyun.com/portal/school/atlas/area_selector)
 
 ```r
 head(A_alb_Q)
