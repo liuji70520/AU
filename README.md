@@ -6,15 +6,30 @@
 This code provides a step-by-step guide to visualize admixture analysis results on a map of China with pie charts indicating population structure by province, and a structure bar plot for sample clusters.
 
 ---
+# Install and load necessary library functions
+required_packages <- c("sf", "tidyverse", "ggforce", "mapmixture", "gridExtra")
+
+# Check and install the missing packages
+for (package in required_packages) {
+  if (!require(package, character.only = TRUE)) {
+    install.packages(package, dependencies = TRUE)
+    library(package, character.only = TRUE)
+  }
+}
+```r
+
+
+```
 
 ### 1. Load Required Libraries
 
 ```r
-# Libraries for data manipulation, spatial plotting, and visual enhancements
-library(sf)          # For reading spatial data
-library(tidyverse)   # For data manipulation
-library(ggforce)     # For pie chart visualization
-library(patchwork)   # For arranging plots
+# Load libraries for geographic and data manipulation
+library(sf)           # Spatial data handling
+library(tidyverse)    # Data manipulation and visualization
+library(ggforce)      # Advanced visualizations (used here for pie charts)
+library(mapmixture)   # Plotting admixture data
+library(gridExtra)    # Arranging multiple plots on one page
 ```
 
 ---
