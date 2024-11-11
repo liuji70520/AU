@@ -6,6 +6,8 @@
 This code provides a step-by-step guide to visualize admixture analysis results on a map of China with pie charts indicating population structure by province, and a structure bar plot for sample clusters.
 
 ---
+
+```r
 # Install and load necessary library functions
 required_packages <- c("sf", "tidyverse", "ggforce", "mapmixture", "gridExtra")
 
@@ -16,9 +18,6 @@ for (package in required_packages) {
     library(package, character.only = TRUE)
   }
 }
-```r
-
-
 ```
 
 ### 1. Load Required Libraries
