@@ -5,6 +5,15 @@
 paste <(cut -f 2  A_alb.fam) <(cat A_alb.5.Q | tr ' ' '\t') > A_alb.5.Q.tab
 ```
 ---
+## Download data into your work dir.
+
+![1](https://github.com/user-attachments/assets/151671a8-ad9e-422e-ac08-5652189b2123)
+click [data](https://github.com/BGIGPD/BestPractices4Pathogenomics/tree/main/Population_Visualization/data) to download files.
+## set work directory in Rstudio.
+![setwd](https://github.com/user-attachments/assets/0d8179b0-a1b7-41d4-9d06-0c558a117cd3)
+you need to use setwd() in R to change the dir.(note: use "/", but not "\")
+of course, you can type ("ctrl" + "shift" + "H")together to switch your work dir fast.
+
 ---
 
 # Code Explanation for Admixture Analysis in R
@@ -170,6 +179,8 @@ map <- ggplot() +
 
 This block plots China’s map with pie charts representing the population structure proportions per province. Colors indicate different clusters.
 
+![pie_map](https://github.com/user-attachments/assets/ab566988-3d53-4aee-933e-e0b1ccad49c6)
+
 ---
 
 ### 11. Structure Plot for Admixture Data by Site
@@ -192,6 +203,7 @@ structure_barplot <- structure_plot(
     axis.text.y = element_text(size = 5)
   )
 ```
+![admixture](https://github.com/user-attachments/assets/fc674764-d049-4924-8424-118aa1ad6572)
 
 The structure plot visualizes individual sample admixture proportions by site, using colors to denote clusters.
 
@@ -205,5 +217,9 @@ grid.arrange(map, structure_barplot, nrow = 2, heights = c(3,1))
 ```
 
 This final step combines the map and structure plots, placing them in a 2-row layout with proportions set to emphasize the map.
+![grid](https://github.com/user-attachments/assets/475fa5f6-8824-4f66-b970-8ef678fef353)
 
 --- 
+# Reference 
+The "mapmixture" package tutorial used in this tutorial is as follows
+[mapmixture](https://github.com/Tom-Jenkins/mapmixture)
